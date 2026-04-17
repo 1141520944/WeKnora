@@ -70,7 +70,7 @@ type WebSearchProviderParameters struct {
 	APIKey string `yaml:"api_key" json:"api_key,omitempty"`
 	// Google Custom Search Engine ID (only for Google provider)
 	EngineID string `yaml:"engine_id" json:"engine_id,omitempty"`
-	// Optional HTTP/HTTPS/SOCKS5 proxy URL for outbound search requests (e.g. http://host:port).
+	// Optional HTTP/HTTPS proxy URL for outbound search requests (e.g. http://host:port); validated with utils.ValidateURLForSSRF.
 	// Does not replace the search API endpoint; only tunnels traffic to the official APIs.
 	ProxyURL string `yaml:"proxy_url" json:"proxy_url,omitempty"`
 	// Provider-specific extra configuration for future extensibility

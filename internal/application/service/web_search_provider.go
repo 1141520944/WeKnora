@@ -3,9 +3,8 @@ package service
 import (
 	"context"
 	"fmt"
-	"net/url"
-	"strings"
 
+	infra_web_search "github.com/Tencent/WeKnora/internal/infrastructure/web_search"
 	"github.com/Tencent/WeKnora/internal/logger"
 	"github.com/Tencent/WeKnora/internal/types"
 	"github.com/Tencent/WeKnora/internal/types/interfaces"
@@ -129,16 +128,5 @@ func validateProviderParameters(provider types.WebSearchProviderType, params typ
 }
 
 func validateOptionalProxyURL(proxyURL string) error {
-	proxyURL = strings.TrimSpace(proxyURL)
-	if proxyURL == "" {
-		return nil
-	}
-	u, err := url.Parse(proxyURL)
-	if err != nil {
-		return fmt.Errorf("invalid proxy_url: %w", err)
-	}
-	if u.Scheme == "" || u.Host == "" {
-		return fmt.Errorf("invalid proxy_url: scheme and host are required")
-	}
-	return nil
+	return infra_web_search.ValidateProxyURL(proxyURL)
 }

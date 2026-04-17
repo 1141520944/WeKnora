@@ -129,7 +129,7 @@ func (s *WebSearchService) resolveProvider(
 	return nil, fmt.Errorf("no web search provider configured")
 }
 
-// mergeProxyFromWebSearchConfig applies cfg.ProxyURL over stored provider params when non-empty (e.g. per-agent override).
+// mergeProxyFromWebSearchConfig applies cfg.ProxyURL over stored provider params when non-empty (call-time override).
 func mergeProxyFromWebSearchConfig(base types.WebSearchProviderParameters, cfg *types.WebSearchConfig) types.WebSearchProviderParameters {
 	if cfg != nil {
 		if pu := strings.TrimSpace(cfg.ProxyURL); pu != "" {

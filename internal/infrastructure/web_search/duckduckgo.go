@@ -23,7 +23,7 @@ type DuckDuckGoProvider struct {
 }
 
 // NewDuckDuckGoProvider creates a new DuckDuckGo provider.
-// DuckDuckGo is free and requires no API key; optional ProxyURL tunnels requests via an HTTP/HTTPS/SOCKS proxy.
+// DuckDuckGo is free and requires no API key; optional ProxyURL tunnels requests via an HTTP/HTTPS proxy.
 func NewDuckDuckGoProvider(params types.WebSearchProviderParameters) (interfaces.WebSearchProvider, error) {
 	client, err := NewSearchHTTPClient(30*time.Second, params.ProxyURL)
 	if err != nil {
