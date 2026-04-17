@@ -57,7 +57,7 @@ type PipelineRequest struct {
 	WebSearchMaxResults int    `json:"-"` // Resolved from agent config or tenant default
 	WebFetchEnabled     bool   `json:"-"` // Auto-fetch full page content for web search results after rerank
 	WebFetchTopN        int    `json:"-"` // Max pages to fetch (default 3)
-	Language string `json:"-"`
+	Language            string `json:"-"`
 }
 
 // QueryIntent represents the classified intent of a user query.

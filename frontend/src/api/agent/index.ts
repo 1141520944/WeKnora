@@ -51,6 +51,7 @@ export interface CustomAgentConfig {
   web_search_enabled?: boolean;
   web_search_provider_id?: string;
   web_search_max_results?: number;
+
   // ===== 多轮对话设置 =====
   multi_turn_enabled?: boolean;     // 是否启用多轮对话
   history_turns?: number;           // 保留历史轮数

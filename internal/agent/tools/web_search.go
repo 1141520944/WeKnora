@@ -82,7 +82,7 @@ type WebSearchTool struct {
 	webSearchStateService interfaces.WebSearchStateService
 	sessionID             string
 	maxResults            int
-	providerID string // WebSearchProviderEntity ID (resolved from agent config or tenant default)
+	providerID            string // WebSearchProviderEntity ID (resolved from agent config or tenant default)
 }
 
 // NewWebSearchTool creates a new web search tool
