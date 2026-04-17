@@ -360,8 +360,6 @@ export default {
       suggestedPrompts: 'Suggested Prompts',
       mode: 'Running Mode',
       webSearch: 'Web Search',
-      webSearchProxyUrl: 'Web Search Proxy',
-      webSearchProxyUrlPlaceholder: 'Optional, e.g. https://host:port',
       webSearchMaxResults: 'Max Search Results',
       knowledgeBases: 'Knowledge Bases',
       allKnowledgeBases: 'All Knowledge Bases',
@@ -2998,8 +2996,6 @@ export default {
       maxIterations: 'Максимальное количество шагов рассуждения при выполнении задач',
       kbScope: 'Выберите область баз знаний, доступных агенту',
       webSearch: 'При включении агент может искать информацию в интернете',
-      webSearchProxyUrl:
-        'Действует только для этого агента и переопределяет прокси в настройках поисковой системы; оставьте пустым, чтобы использовать прокси, настроенный у провайдера',
       webSearchMaxResults: 'Максимальное количество результатов на один поиск',
       retrievalSection: 'Настройка параметров поиска и ранжирования базы знаний',
       queryExpansion: 'Автоматическое расширение поисковых запросов для улучшения полноты',
